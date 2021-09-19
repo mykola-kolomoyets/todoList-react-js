@@ -1,20 +1,21 @@
-import React from 'react';
+import React from "react";
 
-import './CourseGoalItem.css';
+import "./todo-list-item.styles.css";
 
-const CourseGoalItem = props => {
+const TodoListItem = (props) => {
+  const { children, onDelete, id } = props;
   // const [deleteText, setDeleteText] = useState('');
 
   const deleteHandler = () => {
     // setDeleteText('(Deleted!)');
-    props.onDelete(props.id);
+    onDelete(id);
   };
 
   return (
     <li className="goal-item" onClick={deleteHandler}>
-      {props.children}
+      {children}
     </li>
   );
 };
 
-export default CourseGoalItem;
+export { TodoListItem };
