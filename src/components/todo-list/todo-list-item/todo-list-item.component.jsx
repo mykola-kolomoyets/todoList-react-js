@@ -1,6 +1,6 @@
 import React from "react";
 
-import "./todo-list-item.styles.css";
+import styles from "./todo-list-item.styles.module.css";
 
 const TodoListItem = (props) => {
   const { children, onDelete, id } = props;
@@ -12,7 +12,7 @@ const TodoListItem = (props) => {
   };
 
   return (
-    <li className="goal-item" onClick={deleteHandler}>
+    <li className={styles["goal-item"]} onClick={deleteHandler}>
       {children}
     </li>
   );

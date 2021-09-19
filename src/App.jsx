@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 import { TodoList, Input } from "./components";
-import "./App.css";
+import "./app.styles.css";
 
 const App = () => {
   const [courseGoals, setCourseGoals] = useState([
